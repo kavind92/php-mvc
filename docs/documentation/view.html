@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="#">View</a> 
+        </div>
+        <div>
+            <h2>Views</h2>
+            <ul>
+                <li><a href="#view">View</a></li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div id="view">
+            <h2>View</h2>
+            <p>View Path</p>
+            <code>
+                /my-application/<br/>
+                &nbsp;&nbsp;&nbsp;/views/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home.php<br/>
+            </code>
+
+            <p>File : home.php</p>
+
+            <code>
+                &lt;!DOCTYPE html&gt;<br/>
+                &lt;html&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&lt;head&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Home&lt;/title&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&lt;/head&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&lt;body&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is home page<br/>
+                &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br/>
+                &lt;/html&gt;<br/>
+            </code>
+            <p>Controllers Path</p>
+            <code>
+                /my-application/<br/>
+                &nbsp;&nbsp;&nbsp;/controllers/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pages.php<br/>
+            </code>
+            <p>File : pages.php</p>
+            <code>
+                class pages extends Controller{<br/>
+                &nbsp;&nbsp;&nbsp;public function __construct() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct();<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                &nbsp;&nbsp;&nbsp;public function index(){<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                &nbsp;&nbsp;&nbsp;public function home(){<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$this->view->display('home');<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                }<br/>
+                <br/>
+                /**<br/>
+                OUTPUT :<br/>
+                http://[host]/index.php/pages/home/<br/>
+                */<br/>
+            </code>
+        </div>
+
+        <hr/>
+
+    </body>
+</html>

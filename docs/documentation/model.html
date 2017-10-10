@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Model</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="#">Model</a> 
+        </div>
+        <div>
+            <h2>Model</h2>
+            <ul>
+                <li><a href="#model">Model</a></li>
+                <li><a href="#database-connection">Database Connection</a></li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div id="model">
+            <h2>Model</h2>
+            <p>Model Path</p>
+            <code>
+                /app/<br/>
+                &nbsp;&nbsp;&nbsp;/models/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home.php<br/>
+            </code>
+            <p>File : home.php</p>
+            
+            <code>
+                <br/>
+                class welcome_model extends Model {<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function __construct() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct();<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function index() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Hello World";<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                }<br/>
+                /**<br/>
+                http://[host]/index.php/Welcome/<br/>
+                or <br/>
+                http://[host]/index.php/Welcome/index/<br/>
+                */<br/>
+            </code>
+            
+        </div>
+
+        <hr/>
+
+        <div id="database-connection">
+            <h2>Database Connection</h2>
+            
+        </div>
+
+        <hr/>
+
+    </body>
+</html>

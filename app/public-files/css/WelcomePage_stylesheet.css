@@ -1,0 +1,43 @@
+body {
+    background-color: #ffffff;
+    color:#666666;
+    font-family:arial, sans;
+    font-size:100%;
+    line-height:1.7em;
+    margin:0 auto;
+    text-align:center;
+    width:500px;
+}
+
+h1 {
+    font-size:2.18em;
+    letter-spacing:-0.01em;
+}			
+
+a:link {
+    color:#134c8c;
+}
+
+a:visited {
+    color:#666666;
+}
+
+.code {
+    text-align:left;
+    margin:0 0 1.5em 0;
+    font-size:1.0em;
+    border:1px solid #134c8c;
+    background-color: #ffffff;
+    color: #3333ff;
+    padding:1% 1%;
+}
+.comment{
+    color: #b9b9b9;
+}
+
+#bottom {
+    border-top:1px solid #134c8c;
+    margin-top:1em;
+    padding-top:1em;
+    font-size:0.8em;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Controllers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="#">Controllers</a> 
+        </div>
+        <div>
+            <h2>Controllers</h2>
+            <ul>
+                <li><a href="#controller">Controller</a></li>
+                <li><a href="#index-php-removal">.htaccess - index.php removal</a></li>
+                <li><a href="#uri-routing">URI Routing</a></li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div id="controller">
+            <h2>Controller</h2>
+
+            <p>MVC url :</p>
+
+            <code>
+               http://example.com/[controller-class]/[controller-method]/[param1]/[param2]/[param3]/../..
+            </code>
+            
+            <p>if no method in the URL index function in the controller will run</p>
+
+            <p>Controller Template</p>
+
+            <code>
+                <br/>
+                class Welcome extends Controller {<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function __construct() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct();<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function index() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Hello World";<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                }<br/>
+                /**<br/>
+                http://[host]/index.php/Welcome/<br/>
+                or <br/>
+                http://[host]/index.php/Welcome/index/<br/>
+                */<br/>
+            </code>
+
+            <p>Controller With parameters</p>
+
+            <code>
+                <br/>
+                class Welcome extends Controller {<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function __construct() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct();<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function index() {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "Hello World";<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                &nbsp;&nbsp;&nbsp;public function my_test($param1,$param2,$param3,$param4) {<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo "$param1,$param2,$param3,$param4";<br/>
+                &nbsp;&nbsp;&nbsp;}<br/>
+                <br/>
+                }<br/>
+                /**<br/>
+                http://[host]/index.php/Welcome/my_test/1/2/abc/123/<br/>
+                <br/>
+                OUTPUT :<br/>
+                1,2,abc,123<br/>
+                */<br/>
+            </code>
+
+            <p>Functions in Controller</p>
+            <code>
+                //Simply Displays Welcome .php ot .html or .htm file in the my-application/views/ folder<br/>
+                $this->view->display("Welcome");<br/>
+                <br/>
+                //Fetch Welcome .php ot .html or .htm file output in the my-application/views/ folder<br/>
+                $output = $this->view->fetch("Welcome");<br/>
+                //Display output<br/>
+                echo $output;<br/>
+                <br/>
+                //send data and display file<br/>
+                $data = array('title'=>'home');<br/>
+                $this->view->display("Welcome",$data);<br/>
+                <br/>
+                //send data and fetch file<br/>
+                $output = $this->view->fetch("Welcome",$data);<br/>
+                //Display output<br/>
+                echo $output;<br/>
+                <br/>
+            </code>
+        </div>
+
+        <hr/>
+
+        <div id="index-php-removal">
+            <h2>.htaccess - index.php removal</h2>
+            <p>Add below code in .htaccess file to remove index.php in the URL</p>
+            <code>
+                RewriteEngine On<br/>
+                RewriteCond %{REQUEST_FILENAME} !-f<br/>
+                RewriteCond %{REQUEST_FILENAME} !-d<br/>
+                RewriteRule ^(.*)$ index.php/$1 [L]<br/>
+            </code>
+            <p>Actual URL : http://localhost/index.php/controller_name/method_name</p>
+            <p>After code added to .htaccess the URL can be accessed without index.php in URL</p>
+            <code>http://localhost/controller_name/method_name</code>
+        </div>
+
+        <hr/>
+
+        <div id="uri-routing">
+            <h2>URI Routing</h2>
+            <p>URL : </p>
+            <a href="configurations.html#route-configuration">Routing Configuration</a>
+        </div>
+
+        <hr/>
+
+    </body>
+</html>

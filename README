@@ -1,0 +1,68 @@
+NAME: An MVC application framework for PHP
+
+VERSION : 0.0.1(beta)
+
+AUTHOR : Kavin D (kavind92@gmail.com)
+
+DATE : May 3, 2016
+  
+WEBSITE : http://www./
+  
+DOWNLOAD : http://www./download
+
+DESCRIPTION :
+
+    What is MVC?
+    
+    MVC is an Model-View-Controller application framework for PHP.
+    Its design goals are to minimally provide separation between the database
+    operations (Model), the presentation (View), and the glue in between
+    (Controller). With very little extras bundled in, this framework is
+    extremely fast and flexible. Some design aspects and terminology of MVC
+    have been inspired by other PHP frameworks, although the code is 100%
+    original.
+
+    What MVC is NOT
+    
+    MVC is NOT a full-featured framework. As it stands, it is a simple
+    MVC structure with a database support layer (MYSQLI-Procedural, 
+    MYSQLI-object oriented, PDO). Any features user desire (form validation, 
+    session handling, etc.) are easily added with own libraries or helpers. 
+    libraries will become available in the wiki as
+    they are programmed or contributed by other users. If a libraries is
+    essential enough, it may eventually find its way to the core distribution.
+
+
+REQUIREMENTS:    
+    
+    MVC requires PHP 5. The bundled database library requires MYSQLI,PDO,
+    which is included with PHP 5.1 and up.
+   
+   
+FEATURES:
+
+    MVC supplies easy separation between Model, View and
+    Controller, and supports MYSQLI,PDO for the database abstraction layer. Each
+    and every component of MVC is customizable with class extensions,
+    and the framework is easily extended with your own Libraries.
+    
+    Multiple applications are also easy to handle. user can drop libraries
+    in at the application level. The file structure is setup so your 
+    customizations are kept isolated from the core, so updates are easy to 
+    maintain.
+    
+
+COPYRIGHT :
+
+    Copyright(c) 2016 company name, Inc. All rights reserved.
+
+    This library is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation; either version 2.1 of the License, or (at
+    your option) any later version.
+
+    This library is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+    License for more details.    
+    

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Installation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="#">Installation</a> 
+        </div>
+        <div>
+            <h2>Installation</h2>
+            <ul>
+                <li><a href="#quick-installation">Quick Installation</a></li>
+                <li><a href="#single-installation">Single Installation</a></li>
+                <li><a href="#shared-installation">Shared Installation</a></li>
+            </ul>
+        </div>
+        
+        <hr/>
+        
+        <div id="quick-installation">
+            <h2>Quick Installation</h2>
+            <p>Just extract downloaded .zip file into htdocs or www or html folder(public folder name based on server software) </p>
+            <code>
+                /htdocs/<br/>
+                &nbsp;&nbsp;&nbsp;mvc/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mvc-system/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php<br/>
+            </code>
+            <p>Thats all. Now run</p>
+            <code>http://localhost/mvc/index.php</code>
+            <p>if you have online hosting then </p>
+            <code>http://domainname.domain/index.php</code>
+        </div>
+        
+        <hr/>
+        
+        <div id="single-installation">
+            <h2>Single Installation</h2>
+            <p>Directory Structure</p>
+            <code>
+                /htdocs/<br/>
+                &nbsp;&nbsp;&nbsp;mvc-system/<br/>
+                &nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;index.php<br/>
+            </code>
+            <p>you can access using </p>
+            <code>http://localhost/index.php<br/>
+            or<br/>
+            http://domainname.domain/index.php
+            </code>
+        </div>
+        
+        <hr/>
+        
+        <div id="shared-installation">
+            <h2>Shared Installation</h2>
+            <p>Directory Structure</p>
+            <code>
+                /htdocs/<br/>
+                &nbsp;&nbsp;&nbsp;mvc-system/<br/>
+                &nbsp;&nbsp;&nbsp;my-application1/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php<br/>
+                &nbsp;&nbsp;&nbsp;my-application2/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php<br/>
+                &nbsp;&nbsp;&nbsp;my-application3/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php<br/>
+                &nbsp;&nbsp;&nbsp;my-application4/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my-application/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public-files/<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.php<br/>
+            </code>
+        </div>
+        <hr/>
+    </body>
+</html>

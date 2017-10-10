@@ -1,0 +1,67 @@
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+-------------------
+version 0.0.2(beta)
+-------------------
+* will be released soon
+-----------------
+Features Will be Added
+-----------------
+* More Libraries and Helpers will be added
+* reduce reserved names and functions as much as possible
+* send mail implementation library
+* send mail SMTP implementation library
+* pagination library(IMPROVE to cache data)
+* Multiple File Upload Library
+* UNION function operation in DATABASE
+* Clear, neat, simple Documentation
+* fix page extension
+* memory usage(PHP)
+* timer_library updation - multiple timer calculation
+------------
+FIXED ERRORS
+------------
+*
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
+-------------------
+version 0.0.1(beta)
+-------------------
+* initial release
+--------
+Features
+--------
+* Allow to change Application and System folders name and folder locations 
+  whatever the user want(IF CHANGES MADE - must config the index.php as 
+  respective changes)
+* Supports to implement multiple applications
+* SET own Application MODE (Development/deployment) - to hide client side errors
+* User can use your custom Error Handler and Exception handler or use the Error,
+  Exception handler already given
+* System Timer Control(Enable/Disable)
+* Autoload any libraries or helpers or models
+* Multiple URL routing
+* Route URI dashes ( it convert -(dash or minus) symbol to _(under_score) )
+* Multi-languages implementation - world wide multiple communication languages
+* Database query in Plain SQL, Active records method, method-chaining
+* Multiple Database groups and Connections
+* 3 Database Drivers Included : MYSQLI-Procedural, MYSQLI-Object Oriented, PDO
+* html offline user guide added
+--------------------------------
+Following LIBRARIES are Included
+--------------------------------
+* Controller Access Database Library (Helps to access database and its functions 
+  in controller)
+* Timer library 
+* Pagination Library
+--------------------------------
+Following HELPERS are Included
+--------------------------------
+* Auto Copy Right (copyright year updated automatically every year)
+* IP Address (Automatically finds client IP Address)
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------

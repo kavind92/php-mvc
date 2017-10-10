@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Query Building</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="../index.html#database-refferences">Database Documents</a> / 
+            <a href="#">Query Building</a>
+        </div>
+        <div>
+            <h2>Query Building</h2>
+            <h3>Read Queries</h3>
+            <ul>
+                <li><a href="#select">select</a></li>
+                <li><a href="#select_distinct">select_distinct</a></li>
+                <li><a href="#from">from</a></li>
+                <li><a href="#join">join</a></li>
+                <li><a href="#where">where</a></li>
+                <li><a href="#like">like</a></li>
+                <li><a href="#group_by">group_by</a></li>
+                <li><a href="#order_by">order_by</a></li>
+                <li><a href="#limit">limit</a></li>
+                <li><a href="#QueryGrouping">Query Grouping</a></li>
+                <li><a href="#MethodChaining">Method Chaining</a></li>
+            </ul>
+            <h3>Write Queries</h3>
+            <ul>
+                <li><a href="#">insert</a></li>
+                <li><a href="#">update</a></li>
+                <li><a href="#">delete</a></li>
+                <li><a href="#">limit</a></li>
+            </ul>
+            
+            <h3>Run Queries and Get results</h3>
+            <ul>
+                <li><a href="#select">get</a></li>
+                <li><a href="#select">Query</a></li>
+            </ul>
+            
+                
+        </div>
+
+        <hr/>
+        <div id="select">
+            <h2>SELECT</h2>
+            
+            <p>Function : <strong>$this->db->select()</strong></p>
+            <p>Usage : </p>
+            <pre>
+<span class="brown">$query</span> <span class="black">=</span> <span class="brown">$this</span><span class="black">-></span><span class="green">db</span><span class="black">-></span><span class="black">select(</span><span class="black">);</span>  
+<span class="grey">//SELECT * </span></pre>
+
+            <p>Function : <strong>$this->db->select(<i>$string</i>)</strong></p>
+            <p>Usage : </p>
+            <pre>
+<span class="brown">$query</span> <span class="black">=</span> <span class="brown">$this</span><span class="black">-></span><span class="green">db</span><span class="black">-></span><span class="black">select(</span><span class="orange">'column1,column2,column3,column4'</span><span class="black">);</span>  
+<span class="grey">//SELECT column1,column2,column3,column4 </span></pre>
+
+
+            <p>You’ll notice that the above function is assigned to a variable named $query, which can be used to show the results:</p>
+            <pre><span class="brown">$query</span> <span class="black">=</span> <span class="brown">$this</span><span class="black">-></span><span class="green">db</span><span class="black">-></span><span class="black">get(</span><span class="orange">'table_name'</span><span class="black">);</span>
+<span class="blue">foreach</span> <span class="black">(</span><span class="brown">$query</span><span class="black">-></span><span class="black">result()</span> <span class="blue">as</span> <span class="brown">$row</span><span class="black">){</span>
+<span class="blue">echo</span> <span class="brown">$row</span><span class="black">-></span><span class="green">title</span><span class="black">;</span>
+<span class="black">}</span>                
+            </pre>
+        </div>
+    </body>
+</html>

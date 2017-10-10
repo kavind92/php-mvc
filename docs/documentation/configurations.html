@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Configurations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../css/code.css" />
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    </head>
+    <body>
+        <div id="navigation">
+            <a href="../index.html">Documents</a> / 
+            <a href="#">Configurations</a> 
+        </div>
+        <div>
+            <h2>Configurations</h2>
+            <ul>
+                <li><a href="#index-php-configuration">index.php file Configurations</a></li>
+                <li><a href="#default-controller-configuration">Default Controller Configuration</a></li>
+                <li><a href="#route-configuration">Routing Configuration</a></li>
+                <li><a href="#uri-dashes-configuration">URI Dashes Configuration</a></li>
+                <li><a href="#database-configuration">Database Configuration</a></li>
+            </ul>
+        </div>
+
+        <hr/>
+
+        <div id="index-php-configuration">
+            <h2>index.php file Configurations</h2>
+            <p>File Name : index.php</p>
+            <code>
+                <span class="grey">/* ENVIRONMENTAL SETUP - 2 modes Available<br/> 
+                    * define to 0 for DEVELOPMENT - show errors and warnings <br/> 
+                    * define to 1 for DEPLOYMENT - doesn't show errors and warnings<br/> 
+                    */</span><br/> 
+                <span class="brown">$APPLICATION_ENVIRONMENT</span> = 0;<br/> 
+                <br/> 
+                <span class="grey">/* mvc-system folder PATH <br/> 
+                    * Default foldername : mvc-system<br/> 
+                    * Description :  Contain MVC core files and Database Drivers<br/> 
+                    * To update MVC : Replace this(mvc-system) folder by updated mvc-system folder<br/> 
+                    * "/" is mandatory<br/> 
+                    */</span><br/> 
+                <span class="brown">$MVC_SYSTEM_PATH </span><span class="black">=</span> <span class="orange">"mvc-system/";</span><br/> 
+                <br/> 
+                <span class="grey">/* my-application PATH <br/> 
+                    * Default foldername : my-application<br/> 
+                    * Description :  Contain your application files<br/> 
+                    * "/" is mandatory<br/> 
+                    */</span><br/> 
+                <span class="brown">$MY_APPLICATION_PATH </span><span class="black">= </span><span class="orange">"my-application/";</span><br/> 
+
+            </code>
+        </div>
+
+        <hr/>
+
+        <div id="default-controller-configuration">
+            <h2>Default Controller Configuration</h2>
+            <p>File Name : my-application/configurations/all_configurations.php</p>
+            <code>
+                <span class="grey">/* name of default controller/method when none is given in the URL */</span><br/>
+                <span class="brown">$application[</span><span class="orange">'default_controller'</span><span class="black">] = </span><span class="orange">'Welcome'</span><span class="black">;</span><br/>
+                <span class="brown">$application[</span><span class="orange">'default_action'</span><span class="black">] = </span><span class="orange">'index'</span><span class="black">;</span><br/>
+            </code>
+        </div>
+
+        <hr/>
+
+        <div id="route-configuration">
+            <h2>Routing Configuration</h2>
+            <p>File Name : my-application/configurations/all_configurations.php</p>
+            <code>
+                /* URL routing, use preg_replace() compatible syntax */<br/>
+                $route[''] = '';<br/>
+                /* Example<br/>
+                $route['(:any)'] = 'blog/view_by_title/(:any)';<br/>
+                $route['myweb/test1/(:any)'] = 'documentation/view_by_id/(:any)';<br/>
+                $route['myweb/(:any)'] = 'documentation/view_by_id/(:any)';<br/>
+            </code>
+        </div>
+
+        <hr/>
+
+        <div id="uri-dashes-configuration">
+            <h2>URI Dashes Configuration</h2>
+            <p>File Name : my-application/configurations/all_configurations.php</p>
+            <code>
+                /**<br/>
+                * TRUE -> '-'(dash or minus) symbol change in to '_'(underscore) in url controller and function segments<br/>
+                * FALSE -> No changes must use only '_'(underscore) in controller and function<br/>
+                * Example : my-class/my-function/arg-1/arg-2/ change in to my_class/my_function/arg-1/arg-2/<br/>
+                */<br/>
+                $route_uri_dashes['change_uri_dashes'] = FALSE; //TRUE //FALSE<br/>
+                $route_uri_dashes['change_count'] = 2; //0(Zero) means all<br/>
+            </code>
+        </div>
+
+        <hr/>
+
+        <div id="database-configuration">
+            <h2>Database Configuration</h2>
+            <p>File Name : my-application/configurations/all_configurations.php</p>
+            <code>
+                /* DRIVERS LIST<br/>
+                * -------------<br/>
+                * MySQLiDriver<br/>
+                * MySQLiOODriver<br/>
+                * PDODriver<br/>
+                */<br/>
+                <br/>
+                $database['default_database_group'] = "default";<br/>
+                <br/>
+                $database['default'] = array(<br/>
+                'dsn' => '',<br/>
+                'hostname' => 'localhost',<br/>
+                'username' => 'root',<br/>
+                'password' => '',<br/>
+                'database_name' => 'test',<br/>
+                'database_type' => 'mysql',<br/>
+                'database_driver' => 'MySQLiOODriver',<br/>
+                'char_set' => 'utf8',<br/>
+                'persistent' => FALSE,<br/>
+                );<br/><br/><br/>
+                /**<br/>
+                * EXAMPLES<br/>
+                <br/>
+                $database['MySQLiDriver_DATABASE'] = array(<br/>
+                'dsn' => '',<br/>
+                'hostname' => 'localhost',<br/>
+                'username' => 'root',<br/>
+                'password' => '',<br/>
+                'database_name' => 'test',<br/>
+                'database_type' => 'mysql',<br/>
+                'database_driver' => 'MySQLiDriver',<br/>
+                'char_set' => 'utf8',<br/>
+                'persistent' => FALSE,<br/>
+                );<br/>
+                <br/>
+                $database['MySQLiOODriver_DATABASE'] = array(<br/>
+                'dsn' => '',<br/>
+                'hostname' => 'localhost',<br/>
+                'username' => 'root',<br/>
+                'password' => '',<br/>
+                'database_name' => 'test',<br/>
+                'database_type' => 'mysql',<br/>
+                'database_driver' => 'MySQLiOODriver',<br/>
+                'char_set' => 'utf8',<br/>
+                'persistent' => FALSE,<br/>
+                );<br/>
+                <br/>
+                $database['PDODriver_DATABASE'] = array(<br/>
+                'dsn' => '',<br/>
+                'hostname' => 'localhost',<br/>
+                'username' => 'root',<br/>
+                'password' => '',<br/>
+                'database_name' => 'test',<br/>
+                'database_type' => 'mysql',<br/>
+                'database_driver' => 'PDODriver',<br/>
+                'char_set' => 'utf8',<br/>
+                'persistent' => FALSE,<br/>
+                );<br/>
+                <br/>
+            </code>
+        </div>
+
+        <hr/>
+    </body>
+</html>

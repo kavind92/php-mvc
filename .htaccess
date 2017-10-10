@@ -1,0 +1,40 @@
+# ---- Hide index.php in URL ----------------------------------
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.+)$ index.php/$1 [QSA,L]
+# ------------------------------------------------------------------------------
+
+# 1 ---- Establish a custom errorDocuments page --------------------------------
+ErrorDocument 301 /Error/page/301/
+ErrorDocument 302 /Error/page/302/
+ErrorDocument 400 /Error/page/400/	
+ErrorDocument 401 /Error/page/401/
+ErrorDocument 403 /Error/page/403/
+ErrorDocument 404 /Error/page/404/
+ErrorDocument 405 /Error/page/405/
+ErrorDocument 408 /Error/page/408/
+ErrorDocument 415 /Error/page/415/
+ErrorDocument 500 /Error/page/500/
+ErrorDocument 501 /Error/page/501/
+ErrorDocument 502 /Error/page/502/
+ErrorDocument 503 /Error/page/503/
+ErrorDocument 504 /Error/page/504/
+ErrorDocument 505 /Error/page/505/
+# ------------------------------------------------------------------------------
+
+# ---- Prevent directory files listing in all of your folders ------------------
+IndexIgnore *
+#IndexIgnore *.zip *.jpg *.gif
+# ------------------------------------------------------------------------------
+
+# ---- Disable Index Listing ---------------------------------------------------
+Options -Indexes 
+# ------------------------------------------------------------------------------
+
+# ---- DEFLATE COMPRESS method to Reduce Bandwidth  ----------------------------
+<FilesMatch "\.(php|html|htm|css|js|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+#-------------------------------------------------------------------------------
