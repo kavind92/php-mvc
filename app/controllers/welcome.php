@@ -5,10 +5,9 @@ class welcome extends Controller {
     function __construct() {
         parent::__construct();
     }
-    
+
     function __destruct() {
-        echo "This page was rendered in ".MVC_SYSTEM_TIMER." seconds.";
-        console_log();
+        console_log("This page was rendered in " . MVC_SYSTEM_TIMER . " seconds.");
     }
 
     function index() {
@@ -16,7 +15,12 @@ class welcome extends Controller {
         $this->view->display('welcome_view');
     }
 
-    function test($a = NULL, $b = NULL, $c = NULL) {
+    function baseurltest() {
+        //Base URl test
+        echo base_url();
+    }
+
+    function paramstest($a = NULL, $b = NULL, $c = NULL) {
         //parameters test
         echo "A : $a , B : $b , C : $c";
     }

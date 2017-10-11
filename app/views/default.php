@@ -28,9 +28,5 @@
             <span style="font-size: 0.8em">This page was rendered in {MVC_SYSTEM_TIMER} seconds.</span>
         </div>
         
-        <div>
-            <h3>Test</h3>
-            <?php echo base_url(); ?>
-        </div>
     </body>
 </html>
