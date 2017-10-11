@@ -7,7 +7,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo file_access("app/public-files/css/WelcomePage_stylesheet.css"); ?>"/>
     </head>
     <body>
-        welcomeeeeeeeeeeeeeeeee
         <h1>PHP-MVC<small> v{MVC_SYSTEM_VERSION}</small></h1>
 
         <h1>Welcome .. !!</h1>

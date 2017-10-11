@@ -120,7 +120,8 @@ class mvc {
             $output_contents = ob_get_contents();
             ob_end_clean();
             self::timer('mvc_app_end');
-            $output_timer = str_replace('{MVC_SYSTEM_TIMER}', sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end')), $output_contents);
+            define("MVC_SYSTEM_TIMER", sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end')));
+            $output_timer = str_replace('{MVC_SYSTEM_TIMER}', MVC_SYSTEM_TIMER, $output_contents);
             $output_version = str_replace('{MVC_SYSTEM_VERSION}',$GLOBALS['MVC']['VERSION'] , $output_timer);
             $output = $output_version;
             echo $output;

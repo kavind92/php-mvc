@@ -5,6 +5,10 @@ class welcome extends Controller {
     function __construct() {
         parent::__construct();
     }
+    
+    function __destruct() {
+        echo "This page was rendered in ".MVC_SYSTEM_TIMER." seconds.";
+    }
 
     function index() {
         //Default View
