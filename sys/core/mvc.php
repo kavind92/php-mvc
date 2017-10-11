@@ -1,6 +1,6 @@
 <?php
 
-function browser_console($message = NULL, $data = "OK") {
+function console_log($message = NULL, $data = "OK") {
     echo "<script>console.log('" . json_encode($data) . " : " . $message . "');</script>";
 }
 
@@ -73,17 +73,14 @@ class mvc {
     private $url_segments = null;
 
     function __construct($class_id = 'DEFAULT') {
-        //browser_console("MVC started");
         self::instance($this, $class_id);
           
         $this->start();
     }
 
     function __destruct() {
-        //browser_console("MVC stopped");
-        
         if($GLOBALS['MVC']['APP_MODE'] == "DEVELOPMENT"){
-            browser_console(sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end'))." seconds.(v".$GLOBALS['MVC']['VERSION'].")","Page rendered in");
+            //console_log(sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end'))." seconds.(v".$GLOBALS['MVC']['VERSION'].")","Page rendered in");
         }
         
     }
@@ -93,7 +90,6 @@ class mvc {
         $this->timer('mvc_app_start');
 
         $this->getSetPathInfo();
-        //browser_console("Path Info", $this->path_info);
 
         $this->setupErrorHandling();
 
@@ -101,19 +97,14 @@ class mvc {
         $this->config = $MVC['config'];
 
         $this->setupRouting();
-        //browser_console("After Route Path Info", $this->path_info);
 
         $this->setupSegments();
-        //browser_console("URL segments", $this->url_segments);
 
         $this->setupController();
-        //browser_console("Controller Name", $this->controller);
 
         $this->setupAction();
-        //browser_console("Function Name", $this->action);
 
         $this->setupArguments();
-        //browser_console("Parameters", $this->arguments);
         
         $this->setupAutoloaders();
 
@@ -126,14 +117,12 @@ class mvc {
 
         if ($this->config['timer']) {
             /* insert timing info */
-            $output = ob_get_contents();
+            $output_contents = ob_get_contents();
             ob_end_clean();
             self::timer('mvc_app_end');
-            $system_replacing_list= array(
-                 
-            );
-            $output = str_replace('{MVC_SYSTEM_TIMER}', sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end')), $output);
-            $output = str_replace('{MVC_SYSTEM_VERSION}',$GLOBALS['MVC']['VERSION'] , $output);
+            $output_timer = str_replace('{MVC_SYSTEM_TIMER}', sprintf('%0.5f', self::timer('mvc_app_start', 'mvc_app_end')), $output_contents);
+            $output_version = str_replace('{MVC_SYSTEM_VERSION}',$GLOBALS['MVC']['VERSION'] , $output_timer);
+            $output = $output_version;
             echo $output;
         }
     }

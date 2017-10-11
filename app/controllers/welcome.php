@@ -20,7 +20,6 @@ class welcome extends Controller {
         //model test
         $this->load->model('default_model');
         $data['data'] = $this->default_model->testmodel();
-        //print_r($data);
         $this->view->display('testmodel', $data);
     }
 
