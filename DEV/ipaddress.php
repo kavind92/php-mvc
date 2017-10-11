@@ -1,6 +1,7 @@
 <?php
 
-// Function to get the client IP address
+/* Client IP Address */
+
 function get_client_ip_getenv() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
@@ -39,10 +40,16 @@ function get_client_ip_server() {
     return $ipaddress;
 }
 
-function ipaddress(){
-    if(get_client_ip_getenv=="" || get_client_ip_getenv() == "UNKNOWN"){
+function ipaddress() {
+    if (get_client_ip_getenv() == "" || get_client_ip_getenv() == "UNKNOWN") {
         return get_client_ip_server();
-    }else{
+    } else {
         return get_client_ip_getenv();
     }
 }
+
+/*USAGE
+echo ipaddress();
+*/
+
+/*END Client IP Address*/

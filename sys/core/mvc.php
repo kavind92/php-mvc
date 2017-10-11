@@ -1,10 +1,5 @@
 <?php
 
-/*console log in PHP*/
-function console_log($data = "This is PHP-JS Console Log Version 1.0") {
-    echo "<script>console.log('". json_encode($data)."');</script>";
-}
-
 /* base_url */
 function base_url($path = NULL) {
     //$actual_link = $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];

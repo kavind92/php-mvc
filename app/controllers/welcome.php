@@ -36,6 +36,9 @@ class welcome extends Controller {
         //helper test
         $this->load->helper("test");
         echo testhelper();
+        console_log(ipaddress());
+        console_log(auto_copyright());
+        console_log(auto_copyright(2010));
     }
 
     function librarytest() {

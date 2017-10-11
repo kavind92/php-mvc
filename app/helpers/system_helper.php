@@ -66,7 +66,7 @@ function get_client_ip_server() {
 }
 
 function ipaddress() {
-    if (get_client_ip_getenv == "" || get_client_ip_getenv() == "UNKNOWN") {
+    if (get_client_ip_getenv() == "" || get_client_ip_getenv() == "UNKNOWN") {
         return get_client_ip_server();
     } else {
         return get_client_ip_getenv();
@@ -78,3 +78,14 @@ echo ipaddress();
 */
 
 /*END Client IP Address*/
+
+/*console log in PHP*/
+function console_log($data = "This is PHP-JS Console Log Version 1.0") {
+    echo "<script>console.log('". json_encode($data)."');</script>";
+}
+
+/*USAGE
+echo console_log($array or $variable);
+*/
+
+/*END console log in PHP*/

@@ -62,6 +62,7 @@ Features
 --------------------------------
 Following HELPERS are Included
 --------------------------------
+* Console Log (PHP JS console log)
 * Auto Copy Right (copyright year updated automatically every year)
 * IP Address (Automatically finds client IP Address)
 --------------------------------------------------------------------------------
