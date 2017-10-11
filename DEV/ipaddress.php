@@ -1,32 +1,6 @@
 <?php
 
-/* Auto Copyright Year */
-
-function auto_copyright($year = 'auto') {
-    if (intval($year) == 'auto') {
-        $year = date('Y');
-    }
-    if (intval($year) == date('Y')) {
-        return intval($year);
-    }
-    if (intval($year) < date('Y')) {
-        return intval($year) . ' - ' . date('Y');
-    }
-    if (intval($year) > date('Y')) {
-        return date('Y');
-    }
-}
-
-/* USAGE
-  echo auto_copyright(); // 2011
-  echo auto_copyright("2010");  // 2010 - 2017
- */
-
-/* END Auto Copyright Year */
-
-
-/* Client IP Address */
-
+// Function to get the client IP address
 function get_client_ip_getenv() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
@@ -65,16 +39,10 @@ function get_client_ip_server() {
     return $ipaddress;
 }
 
-function ipaddress() {
-    if (get_client_ip_getenv == "" || get_client_ip_getenv() == "UNKNOWN") {
+function ipaddress(){
+    if(get_client_ip_getenv=="" || get_client_ip_getenv() == "UNKNOWN"){
         return get_client_ip_server();
-    } else {
+    }else{
         return get_client_ip_getenv();
     }
 }
-
-/*USAGE
-echo ipaddress();
-*/
-
-/*END Client IP Address*/

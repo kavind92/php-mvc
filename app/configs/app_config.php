@@ -33,9 +33,9 @@ $MVC['config']['timer'] = true;
 $MVC['config']['autoload']['libraries'] = array();
 
 /* auto-loaded scripts 
- * EXAMPLE :- $MVC['config']['autoload']['helpers'] = array('test');
+ * EXAMPLE :- $MVC['config']['autoload']['helpers'] = array('system_helper','test');
  */
-$MVC['config']['autoload']['helpers'] = array();
+$MVC['config']['autoload']['helpers'] = array('system_helper');
 
 /* auto-loaded scripts 
  *  EXAMPLE :- $MVC['config']['autoload']['models'] = array('default_model');
