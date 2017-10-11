@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome</title>
-        <link rel="stylesheet" type="text/css" href="<?php echo file_access("app/public-files/css/WelcomePage_stylesheet.css"); ?>"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo file_access("public-files/css/WelcomePage_stylesheet.css"); ?>"/>
     </head>
     <body>
         <h1>PHP-MVC<small> v{MVC_SYSTEM_VERSION}</small></h1>
