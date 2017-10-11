@@ -1,40 +1,34 @@
 <?php
-/**
- * default.php
- *
- * default application controller
- *
- * @package		TinyMVC
- * @author		Monte Ohrt
- */
+
 class welcome extends Controller {
 
     function __construct() {
         parent::__construct();
     }
 
-    function index(){
+    function index() {
         $this->view->display('welcome_view');
     }
-    
-    function test($a = NULL, $b = NULL , $c = NULL){
+
+    function test($a = NULL, $b = NULL, $c = NULL) {
         echo "A : $a , B : $b , C : $c";
     }
-    
-    function modeltest(){
+
+    function modeltest() {
         $this->load->model('default_model');
         $data['data'] = $this->default_model->testmodel();
         //print_r($data);
-        $this->view->display('testmodel',$data);
+        $this->view->display('testmodel', $data);
     }
-    
-    function helpertest(){
+
+    function helpertest() {
         $this->load->helper("test");
         echo testhelper();
     }
-    
-    function librarytest(){
+
+    function librarytest() {
         $this->load->library("test_library");
         echo $this->test_library->test1();
     }
+
 }
