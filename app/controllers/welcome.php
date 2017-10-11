@@ -8,6 +8,7 @@ class welcome extends Controller {
     
     function __destruct() {
         echo "This page was rendered in ".MVC_SYSTEM_TIMER." seconds.";
+        console_log();
     }
 
     function index() {

@@ -1,7 +1,8 @@
 <?php
 
-function console_log($message = NULL, $data = "OK") {
-    echo "<script>console.log('" . json_encode($data) . " : " . $message . "');</script>";
+/*console log in PHP*/
+function console_log($data = "This is PHP-JS Console Log Version 1.0") {
+    echo "<script>console.log('". json_encode($data)."');</script>";
 }
 
 /* base_url */
