@@ -20,9 +20,17 @@ Features Will be Added
 * fix page extension
 * memory usage(PHP)
 * timer_library updation - multiple timer calculation
+--------------------------------
+Following LIBRARIES will be Included
+--------------------------------
+* Controller Access Database Library (Helps to access database and its functions 
+  in controller)
+* Timer library 
+* Pagination Library
 ------------
 FIXED ERRORS
 ------------
+*
 *
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -51,13 +59,6 @@ Features
 * Multiple Database groups and Connections
 * 3 Database Drivers Included : MYSQLI-Procedural, MYSQLI-Object Oriented, PDO
 * html offline user guide added
---------------------------------
-Following LIBRARIES are Included
---------------------------------
-* Controller Access Database Library (Helps to access database and its functions 
-  in controller)
-* Timer library 
-* Pagination Library
 --------------------------------
 Following HELPERS are Included
 --------------------------------
