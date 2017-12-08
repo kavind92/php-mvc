@@ -116,9 +116,7 @@ class LoadController {
      * @param   string $language the script plugin name
      */
     public function language($language) {
-        
         $filename = strtolower("{$language}.php");
-
         try {
             if (file_exists($filename)) {
                 $ld = array();

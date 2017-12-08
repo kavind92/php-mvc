@@ -1,7 +1,18 @@
 <?php
 
 /* MVC SYSTEM FOLDER */
-$MVC['APP_MODE'] = "PRODUCTION"; //DEVELOPMENT TESTING PRODUCTION
+$MVC['APP_MODE'] = "DEVELOPMENT"; //DEVELOPMENT TESTING PRODUCTION
+
+/* MVC SYSTEM FOLDER */
+$MVC['SYS_PATH'] = "system/";
+
+/* MVC APPLICATION FOLDER */
+$MVC['APP_PATH'] = "application/";
+
+/* ERROR HANDLING */
+$MVC['MVC_ERROR_HANDLING'] = 1; // 1(handle errors internally) 0(to handle externelly)
+
+/* -------------------DONT MODIFY CODE BELOW--------------------- */
 
 switch ($MVC['APP_MODE']) {
     case "DEVELOPMENT":
@@ -18,18 +29,6 @@ switch ($MVC['APP_MODE']) {
         ini_set('display_errors', 0);//OFF
         break;
 }
-
-/* MVC SYSTEM FOLDER */
-$MVC['SYS_PATH'] = "system/";
-
-
-/* MVC APPLICATION FOLDER */
-$MVC['APP_PATH'] = "application/";
-
-/* ERROR HANDLING */
-$MVC['MVC_ERROR_HANDLING'] = 1; // 1(handle errors internally) 0(to handle externelly)
-
-/* -------------------DONT MODIFY CODE BELOW--------------------- */
 
 $MVC['BASE_PATH'] = dirname(__FILE__) . '/';
 $MVC['SYS_PATH'] = $MVC['BASE_PATH'] . $MVC['SYS_PATH'];
