@@ -7,11 +7,11 @@ ini_set('display_errors', 'On');
 $MVC['APP_MODE'] = "DEVELOPMENT"; //DEVELOPMENT TESTING PRODUCTION
 
 /* MVC SYSTEM FOLDER */
-$MVC['SYS_PATH'] = "sys/";
+$MVC['SYS_PATH'] = "system/";
 
 
 /* MVC APPLICATION FOLDER */
-$MVC['APP_PATH'] = "app/";
+$MVC['APP_PATH'] = "application/";
 
 /* ERROR HANDLING */
 $MVC['MVC_ERROR_HANDLING'] = 1; // 1(handle errors internally) 0(to handle externelly)
