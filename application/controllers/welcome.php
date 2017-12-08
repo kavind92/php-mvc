@@ -50,7 +50,7 @@ class welcome extends Controller {
     function languagetest() {
         //library test
         $this->load->language("tamil");
-        echo $this->language['This is in english'];
+        echo "This is in english ". $this->language['This is in english'];
     }
 
 }

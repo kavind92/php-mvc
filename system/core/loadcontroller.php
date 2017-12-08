@@ -118,15 +118,13 @@ class LoadController {
     public function language($language) {
         $filename = strtolower("{$language}.php");
         try {
-            if (file_exists($filename)) {
-                $ld = array();
-                include($filename);
-                /* get instance of controller object */
-                $controller = mvc::instance(null, 'Controller');
-                $controller->language = $ld; // language data
-            }
+            $ld = array();
+            include($filename);
+            /* get instance of controller object */
+            $controller = mvc::instance(null, 'Controller');
+            $controller->language = $ld; // language data
         } catch (Exception $e) {
-            throw new Exception("Unknown language file '{$filename}'" . $e->getMessage());
+            throw new Exception("Unknown language file '{$filename}' \n" . $e->getMessage());
         }
     }
 
