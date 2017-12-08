@@ -6,7 +6,22 @@ RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule ^(.+)$ index.php/$1 [QSA,L]
 # ------------------------------------------------------------------------------
 
-# 1 ---- Establish a custom errorDocuments page --------------------------------
+# ---- Prevent directory files listing in all of your folders ------------------
+IndexIgnore *
+#IndexIgnore *.zip *.jpg *.gif
+# ------------------------------------------------------------------------------
+
+# ---- Disable Index Listing ---------------------------------------------------
+Options -Indexes 
+# ------------------------------------------------------------------------------
+
+# ---- DEFLATE COMPRESS method to Reduce Bandwidth  ----------------------------
+<FilesMatch "\.(php|html|htm|css|js|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+#-------------------------------------------------------------------------------
+
+# ---- Establish a custom errorDocuments page --------------------------------
 ErrorDocument 301 /Error/page/301/
 ErrorDocument 302 /Error/page/302/
 ErrorDocument 400 /Error/page/400/	
@@ -23,18 +38,3 @@ ErrorDocument 503 /Error/page/503/
 ErrorDocument 504 /Error/page/504/
 ErrorDocument 505 /Error/page/505/
 # ------------------------------------------------------------------------------
-
-# ---- Prevent directory files listing in all of your folders ------------------
-IndexIgnore *
-#IndexIgnore *.zip *.jpg *.gif
-# ------------------------------------------------------------------------------
-
-# ---- Disable Index Listing ---------------------------------------------------
-Options -Indexes 
-# ------------------------------------------------------------------------------
-
-# ---- DEFLATE COMPRESS method to Reduce Bandwidth  ----------------------------
-<FilesMatch "\.(php|html|htm|css|js|xml)$">
-SetOutputFilter DEFLATE
-</FilesMatch>
-#-------------------------------------------------------------------------------
