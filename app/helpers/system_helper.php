@@ -81,7 +81,8 @@ echo ipaddress();
 
 /*console log in PHP*/
 function console_log($data = "This is PHP-JS Console Log Version 1.0") {
-    echo "<script>console.log('". json_encode($data)."');</script>";
+    $json_data = array($data);
+    echo "<script>console.log('". json_encode($json_data)."');</script>";
 }
 
 /*USAGE
