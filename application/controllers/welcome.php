@@ -46,5 +46,12 @@ class welcome extends Controller {
         $this->load->library("test_library");
         echo $this->test_library->test1();
     }
+    
+    function languagetest() {
+        echo 'hai';
+        //library test
+        $this->load->language("tamil");
+        echo $this->language['This is in english'];
+    }
 
 }
